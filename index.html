@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Registro - Mi Web</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:'Montserrat',sans-serif;
+    }
+    
+    body{
+        width: 100%;
+        height: 100%;
+        background: url(img/monachinaxd.gif);
+        background-attachment: fixed;;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover
+    }
+    
+    .encabezado{
+        background: #313131;
+        padding: 10px;
+        color: #fff;
+
+    }
+    .formulario{
+    width:80vw;
+    /*background:#e6e6e6;*/
+    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter:blur(5px);
+    background: rgba(255,255,255,0.6) ;
+    border-radius:8px;
+    box-shadow:0 0 40px -10px #000;
+    margin:calc(50vh - 220px) auto;
+    padding:20px 30px;
+    max-width:calc(100vw - 40px);
+    position:relative
+    }
+    
+    .contact{
+    content:'Hi';
+    position:absolute;
+    bottom:-15px;right:-20px;
+    background:#313131;
+    color:#fff;
+    width:320px;
+    padding:16px 4px 16px 0;
+    border-radius:6px;
+    font-size:13px;
+    box-shadow:10px 10px 40px -14px #000
+    }
+    
+    h2{
+    margin:10px 0;
+    padding-bottom:10px;
+    width:180px;
+    color:#313131;
+    border-bottom:3px solid #515151
+    }
+    input{
+        width:100%;
+        padding:10px;
+        box-sizing:border-box;
+        background:none;
+        outline:none;
+        resize:none;
+        border:0;
+        transition:all .3s;
+        border-bottom:2px solid #515151;
+        color: #000
+    }
+    input:focus{
+        border-bottom:2px solid #fff
+    }
+    p:before, label{
+        content:attr(type);
+        display:block;
+        margin:28px 0 0;
+        font-size:14px;
+        color:#313131
+    }
+    button{
+        padding:8px 12px;
+        margin:10px 5px 40px 85%;
+        border:2px solid #313131;
+        background:0;color:#313131;
+        cursor:pointer;
+        border-radius: 10px;
+        transition:all .3s
+    }
+    button:hover{
+        background:#ff00a7;
+        color:#fff;
+    }
+    span{
+        margin:0 5px 0 15px
+    }
+    .radiob input, .checks input{
+        display: none;
+    }
+    .radiob label, .checks label{
+        color: #313131;
+        width: 100%;
+        padding: 5px 15px 5px 50px;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        -webkit-transition: all 0.3 ease;
+        -o-transition: all 0.3 ease;
+        transition: all 0.3s ease;
+    }
+    .radiob label:hover, .checks label:hover{
+        background: rgba(51,51,51,0.5);
+        color: lightgray
+    }
+    .radiob label:before{
+        content: "";
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        background: none;
+        border: 3px solid #515151;
+        border-radius: 50%;
+        position: absolute;
+        left: 15px;
+        top: 5px
+    }
+    .checks label:before{
+        content: "";
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        background: none;
+        border: 3px solid #515151;
+        border-radius: 3px;
+        position: absolute;
+        left: 15px;
+        top: 5px
+    }
+    
+    .radiob input:checked +label, .checks input:checked +label{
+        padding: 5px 15px;
+        background: #313131;
+        border-radius: 2px;
+        color: #fff
+    }
+    
+    .radiob input:checked +label:before, .checks input:checked +label:before{
+        display: none
+    }
+    
+    .lista{
+        padding: 20px 10px;
+    }
+    
+    #pob{
+        padding: 10px;
+        margin:20px auto;
+        background: 0;
+        color: #515151;
+        cursor: pointer
+    }
+    
+    footer{
+        background: #313131;
+        color: white;
+        padding: 10px;
+        text-align: end
+    }
+    
+    </style>
+<body>
+   <header class="encabezado">
+       <h1>Formulario de Registro - Mi Web</h1>
+   </header>
+    <form action="" class="formulario" method="get">
+        <h2>¡Cont&aacute;ctanos!</h2>
+        <div class="personalInfo">
+            <p type="Nombre: ">
+                <input type="text" placeholder="escribe tu nombre aquí" maxlength="50">
+            </p>
+            
+            <p type="Apellidos: ">
+                <input type="text" placeholder="escribe tu apellido aquí" maxlength="50">
+            </p>
+            <p type="Correo: ">
+                <input type="email" placeholder="escribe tu aquí">
+            </p>
+        </div>
+        
+        <div class="radiob">
+           <p type="sexo"></p>
+            <input type="radio" id="hombre" name="genre">
+            <label for="hombre">Hombre</label>
+            <input type="radio" id="mujer" name="genre">
+            <label for="mujer">Mujer</label>
+        </div>
+        
+        <div class="lista">
+           <p type="Población">
+            <select name="poblacion" id="pob">
+                <option value="orizaba">Orizaba</option>
+                <option value="cordoba">C&oacute;rdoba</option>
+                <option value="xalapa">Xalapa</option>
+                <option value="veracruz">Veracruz</option>
+                
+            </select>
+            </p>
+        </div>
+        
+        <div class="checks">
+           <p type="Opciones">
+              <input type="checkbox" id="nov" >
+            <label for="nov">Deseo recibir información sobre novedades y ofertas</label>
+            
+            <input type="checkbox" id="condi">
+            <label for="condi">Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos</label>
+            
+            <input type="checkbox" id="info" checked="checked">
+            <label for="info">Deseo recibir información sobre novedades y ofertas</label> 
+               
+           </p>
+            
+        </div>
+        
+        <button>Enviar</button>
+        <div class="contact">
+            <span ></span>27 2131 0450
+          <span ></span> contactoWeb@gmail.com
+        </div>
+        </form>
+        <footer>made with &hearts;</footer>
+</body>
+</html>
