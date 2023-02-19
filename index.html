@@ -56,11 +56,8 @@
     }
     
     h2{
-    margin:10px 0;
-    padding-bottom:10px;
-    width:180px;
-    color:#313131;
-    border-bottom:3px solid #515151
+    Padding:20px 15px;
+    color:#fff;
     }
     input{
         width:100%;
@@ -85,11 +82,13 @@
         color:#313131
     }
     button{
-        padding:8px 12px;
-        margin:10px 5px 40px 85%;
+        padding:10px 15px;
+        margin:10px 0 0 80%;
         border:2px solid #313131;
-        background:0;color:#313131;
+        background:0;
+        color:#313131;
         cursor:pointer;
+        font-size: 15px;
         border-radius: 10px;
         transition:all .3s
     }
@@ -155,12 +154,12 @@
     }
     
     .lista{
-        padding: 0 10px;
+        padding:0 10px;
     }
     
     #pob{
         padding: 10px;
-        margin:20px auto;
+        margin:10px auto;
         background: 0;
         color: #515151;
         cursor: pointer
@@ -172,14 +171,25 @@
         padding: 10px;
         text-align: end
     }
-    
+    .encabezadof{
+    position:absolute;
+    top:-35px;
+    background:#313131;
+    color:#fff;
+    width:260px;
+    border-radius:5px;
+    font-size:13px;
+    box-shadow:10px 10px 40px -14px #000
+    }
     </style>
 <body>
    <header class="encabezado">
        <h1>Formulario de Registro - Mi Web</h1>
    </header>
     <form action="" class="formulario" method="get">
-        <h2>¡Cont&aacute;ctanos!</h2>
+       <div class="encabezadof">
+           <h2>Contact Us!</h2>
+        </div>
         <div class="personalInfo">
             <p type="Nombre: ">
                 <input type="text" placeholder="escribe tu nombre aquí" maxlength="50">
@@ -189,7 +199,7 @@
                 <input type="text" placeholder="escribe tu apellido aquí" maxlength="50">
             </p>
             <p type="Correo: ">
-                <input type="email" placeholder="escribe tu correo aquí">
+                <input type="email" placeholder="escribe tu aquí">
             </p>
         </div>
         
@@ -216,23 +226,15 @@
         <div class="checks">
            <p type="Opciones">
               <input type="checkbox" id="nov" >
-            <label for="nov">Deseo recibir información sobre novedades y ofertas</label>
+            <label for="nov">Deseo recibir informaci&oacute;n sobre novedades y ofertas</label>
             
             <input type="checkbox" id="condi">
-            <label for="condi">Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos</label>
-            
+            <label for="condi">Declaro haber le&iacute;do y aceptar las condiciones generales del programa y la normativa sobre protecci&oacute;n de datos</label>
             <input type="checkbox" id="info" checked="checked">
-            <label for="info">Deseo recibir información sobre novedades y ofertas</label> 
-               
+            <label for="info">Deseo recibir informaci&oacute;n sobre novedades y ofertas</label> 
            </p>
-            
         </div>
-        
         <button>Enviar</button>
-        <div class="contact">
-            <span ></span>27 2131 0450
-          <span ></span> contactoWeb@gmail.com
-        </div>
         </form>
         <footer>made with &hearts;</footer>
 </body>
